@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:sptk/constant/constant.dart';
+import 'package:sptk/screens/news_webview.dart';
 import 'package:sptk/screens/web_view.dart';
 import 'package:sptk/utils/model/categories.dart';
 import 'package:sptk/utils/model/post.dart';
@@ -27,7 +28,7 @@ class NewsList extends StatelessWidget {
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (BuildContext context) => WebViewScene(
+                  builder: (BuildContext context) => NewsWebView(
                         title: post.yoastHeadJson.title,
                         url:post.link))),
           child: Container(

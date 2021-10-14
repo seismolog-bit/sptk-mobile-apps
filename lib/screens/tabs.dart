@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sptk/constant/constant.dart';
 import 'package:sptk/constant/cupertino.dart';
 import 'package:sptk/screens/home/home_page.dart';
+import 'package:sptk/screens/info/info_page.dart';
 import 'package:sptk/screens/navbar/custom_button_navbar.dart';
 import 'package:sptk/screens/unduhan/unduhan_page.dart';
 import 'package:sptk/utils/model/categories.dart';
@@ -116,7 +117,7 @@ class _TabsScreenState extends State<TabsScreen> {
                     });
                   },
                   children: [
-                    const Center(child: Text('Info')),
+                    const InfoPage(),
                     Center(
                       child: HomePage(
                         posts: _posts,
@@ -124,8 +125,8 @@ class _TabsScreenState extends State<TabsScreen> {
                         categories: _categories,
                       ),
                     ),
-                    const Center(
-                      child: UnduhanPage(),
+                    Center(
+                      child: UnduhanPage(categories: _categories),
                     )
                   ],
                 ),

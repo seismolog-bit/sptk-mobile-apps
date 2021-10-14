@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Dokumen",
+    "data": [
+      {
+        "title": "Buku Kerja",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/database.png"
+      },
+      {
+        "title": "Perangkat Pembelajaran",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/database.png"
+      },
+      {
+        "title": "Program Semester",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/layers.png"
+      },
+      {
+        "title": "Program Tahunan",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/layout.png"
+      },
+      {
+        "title": "KI/KD",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/open-book.png"
+      },
+      {
+        "title": "Analisis Kompetensi",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/check.png"
+      },
+      {
+        "title": "Analisis Alokasi Waktu",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/calendar.png"
+      }
+    ]
+  },
+  {
+    "title": "Kelengkapan",
+    "data" : [
+      {
+        "title": "Buku Pembelajaran",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/book.png"
+      },
+      {
+        "title": "Desain",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/image.png"
+      },
+      {
+        "title": "Aplikasi",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/seismolog-bit/sptk-assets/master/assets/Feather%20Icons/cpu.png"
+      }
+    ]
+  }
+]
