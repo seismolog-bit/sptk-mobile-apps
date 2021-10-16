@@ -91,11 +91,11 @@ class _UnduhanPageState extends State<UnduhanPage> {
                                 height: 84,
                                 url: datas.yoastHeadJson.twitterImage,
                               ),
-                              const SizedBox(height: 6),
+                              const SizedBox(height: 4),
                               Text(
                                 datas.name,
                                 textAlign: TextAlign.center,
-                                maxLines: 2,
+                                maxLines: 1,
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: ThemeColors.muted,

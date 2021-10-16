@@ -6,6 +6,8 @@ import 'package:sptk/screens/home/home_page.dart';
 import 'package:sptk/screens/info/info_page.dart';
 import 'package:sptk/screens/navbar/custom_button_navbar.dart';
 import 'package:sptk/screens/unduhan/unduhan_page.dart';
+import 'package:sptk/utils/ad/app_lifecycle_reactor.dart';
+import 'package:sptk/utils/ad/app_open_ad_manager.dart';
 import 'package:sptk/utils/ad_helper.dart';
 import 'package:sptk/utils/model/categories.dart';
 import 'package:sptk/utils/model/post.dart';
@@ -57,6 +59,10 @@ class _TabsScreenState extends State<TabsScreen> {
 
     selectedPage = widget.initialPage;
     pageController = PageController(initialPage: widget.initialPage);
+
+    // AppOpenAdManager appOpenAdManager = AppOpenAdManager()..loadAd();
+    // WidgetsBinding.instance!
+    //     .addObserver(AppLifecycleReactor(appOpenAdManager: appOpenAdManager));
 
     fetchCategories();
     fetchFeature();
@@ -162,18 +168,6 @@ class _TabsScreenState extends State<TabsScreen> {
                       )
                     ],
                   ),
-                  // Align(
-                  //   alignment: Alignment.bottomCenter,
-                  //   child: CustomBottomNavBar(
-                  //     selectedIndex: selectedPage,
-                  //     onTap: (index) {
-                  //       setState(() {
-                  //         selectedPage = index;
-                  //       });
-                  //       pageController.jumpToPage(selectedPage);
-                  //     },
-                  //   ),
-                  // )
 
                   Align(
                     alignment: Alignment.bottomCenter,

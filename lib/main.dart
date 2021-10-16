@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:sptk/constant/constant.dart';
+import 'package:sptk/screens/main_screen.dart';
 import 'package:sptk/screens/tabs.dart';
 
 void main() async {
@@ -15,6 +16,9 @@ void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
+  // MobileAds.instance.updateRequestConfiguration(RequestConfiguration(
+  //   testDeviceIds: ['CA1B6A991DBBFCAEEF4A6A4C72DC71AA']
+  // ));
 
   runApp(const MyApp());
 }
@@ -42,7 +46,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const TabsScreen(),
+      home: const MainScreen(),
     );
   }
 }

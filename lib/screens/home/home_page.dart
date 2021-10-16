@@ -7,6 +7,7 @@ import 'package:sptk/constant/constant.dart';
 import 'package:sptk/constant/cupertino.dart';
 import 'package:sptk/screens/home/home_sliders.dart';
 import 'package:sptk/screens/news/news_list.dart';
+import 'package:sptk/screens/notification/notification_screen.dart';
 import 'package:sptk/screens/web_view.dart';
 import 'package:sptk/utils/model/categories.dart';
 import 'package:sptk/utils/model/post.dart';
@@ -128,7 +129,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.notifications_none))
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationScreen())), icon: const Icon(Icons.notifications_none))
         ],
       ),
       body: firstLoading

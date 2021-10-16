@@ -33,7 +33,7 @@ class AdHelper {
     return 'ca-app-pub-8574618362253073/1989903431';
   }
 
-  String get appOpenAdUnitId {
+  static String get appOpenAdUnitId {
     /// Always test with test ads
     // if (kDebugMode) {
     //   return MobileAds.appOpenAdTestUnitId;
@@ -41,7 +41,7 @@ class AdHelper {
     return 'ca-app-pub-8574618362253073/4930927396';
   }
 
-  String get rewardedInterstitialAdUnitId {
+  static String get rewardedInterstitialAdUnitId {
     /// Always test with test ads
     // if (kDebugMode) {
     //   return MobileAds.rewardedInterstitialAdTestUnitId;
