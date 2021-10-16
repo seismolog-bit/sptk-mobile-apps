@@ -18,7 +18,7 @@ class InfoPage extends StatelessWidget {
           ListTile(
             leading: Icon(FeatherIcons.info, color: ThemeColors.primary,),
             title: const Text('Tentang aplikasi'),
-            subtitle: const Text('V. 1.0.0', style: TextStyle(
+            subtitle: const Text('V. 1.0.1', style: TextStyle(
               fontSize: 11
             ),),
             // trailing: Icon(FeatherIcons.chevronRight, color: ThemeColors.muted.withOpacity(.5),),
@@ -26,9 +26,6 @@ class InfoPage extends StatelessWidget {
           ListTile(
             leading: Icon(FeatherIcons.key, color: ThemeColors.primary,),
             title: const Text('Privacy policy'),
-            // subtitle: const Text('V. 1.0.0', style: TextStyle(
-            //   fontSize: 11
-            // ),),
             trailing: Icon(FeatherIcons.chevronRight, color: ThemeColors.muted.withOpacity(.5),),
             onTap: () => Navigator.push(
               context,
@@ -40,9 +37,6 @@ class InfoPage extends StatelessWidget {
           ListTile(
             leading: Icon(FeatherIcons.shield, color: ThemeColors.primary,),
             title: const Text('Disclaimer'),
-            // subtitle: const Text('V. 1.0.0', style: TextStyle(
-            //   fontSize: 11
-            // ),),
             trailing: Icon(FeatherIcons.chevronRight, color: ThemeColors.muted.withOpacity(.5),),
             onTap: () => Navigator.push(
               context,
@@ -54,9 +48,6 @@ class InfoPage extends StatelessWidget {
           ListTile(
             leading: Icon(FeatherIcons.alertTriangle, color: ThemeColors.primary,),
             title: const Text('Term and conditions'),
-            // subtitle: const Text('V. 1.0.0', style: TextStyle(
-            //   fontSize: 11
-            // ),),
             trailing: Icon(FeatherIcons.chevronRight, color: ThemeColors.muted.withOpacity(.5),),
             onTap: () => Navigator.push(
               context,
@@ -68,9 +59,6 @@ class InfoPage extends StatelessWidget {
           ListTile(
             leading: Icon(FeatherIcons.mail, color: ThemeColors.primary,),
             title: const Text('Contact'),
-            // subtitle: const Text('V. 1.0.0', style: TextStyle(
-            //   fontSize: 11
-            // ),),
             trailing: Icon(FeatherIcons.chevronRight, color: ThemeColors.muted.withOpacity(.5),),
             onTap: () => Navigator.push(
               context,

@@ -2,9 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:sptk/constant/constant.dart';
-import 'package:sptk/screens/home/home_page.dart';
 import 'package:sptk/screens/tabs.dart';
 
 void main() async {
@@ -15,6 +14,7 @@ void main() async {
   }
 
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
 
   runApp(const MyApp());
 }

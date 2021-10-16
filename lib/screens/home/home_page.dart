@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:intl/intl.dart';
@@ -32,7 +34,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     changeTime();
@@ -69,9 +70,9 @@ class _HomePageState extends State<HomePage> {
 
       List<dynamic> resCategories = responseCategories;
 
-      resCategories.forEach((data) {
+      for (var data in resCategories) {
         _categories.add(CategoriesModel.fromJson(data));
-      });
+      }
 
       setState(() {
         _categories = _categories;
@@ -85,11 +86,11 @@ class _HomePageState extends State<HomePage> {
   Future<void> postFetch() async {
     try {
       var responsePost =
-          await Request.get(action: 'posts?categories=1&page=$page&_embed');
+          await Request.get(action: 'posts?page=$page&_embed');
       List<dynamic> resPosts = responsePost;
-      resPosts.forEach((data) {
+      for (var data in resPosts) {
         _posts.add(PostModel.fromJson(data));
-      });
+      }
 
       setState(() {
         _posts = _posts;
@@ -105,7 +106,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -257,7 +257,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 18,
                 ),
-                Constant.title('Informasi Terbaru'),
+                Constant.title('Postingan Terbaru'),
                 NewsList(posts: _posts, categories: _categories),
                 isLoading
                     ? SizedBox(height: 52, child: ConstantCupertino.indicator())

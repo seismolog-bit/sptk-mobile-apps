@@ -11,7 +11,8 @@ import 'package:sptk/utils/request.dart';
 class NewsGrid extends StatefulWidget {
   final CategoriesModel category;
   final List<CategoriesModel> categories;
-  const NewsGrid({Key? key, required this.category, required this.categories}) : super(key: key);
+  const NewsGrid({Key? key, required this.category, required this.categories})
+      : super(key: key);
 
   @override
   _NewsGridState createState() => _NewsGridState();
@@ -48,96 +49,51 @@ class _NewsGridState extends State<NewsGrid> {
         _posts = _posts;
       });
     } catch (e) {
+      Toast.show('Tidak ada postingan');
+      setState(() {
+        isFirst = false;
+      });
       print('Fetch news grid: $e');
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return isFirst
-        ? ConstantCupertino.indicator()
-        : ListView(
-            children: [
-              // GridView.builder(
-              //   padding: const EdgeInsets.only(left: 10, right: 10),
-              //   primary: false,
-              //   shrinkWrap: true,
-              //   itemCount: _posts.length,
-              //   itemBuilder: (context, i) {
-              //     PostModel post = _posts[i];
-              //     return Container(
-              //       margin: const EdgeInsets.all(6),
-              //       child: Column(
-              //         children: [
-              //           CardImage(
-              //               width: double.infinity,
-              //               height: 105,
-              //               url: post.embedded.wpFeaturedmedia[0].sourceUrl),
-              //           const SizedBox(height: 6),
-              //           Text(
-              //             post.yoastHeadJson.title,
-              //             maxLines: 2,
-              //             overflow: TextOverflow.ellipsis,
-              //             style: const TextStyle(
-              //                 fontWeight: FontWeight.w500, fontSize: 14),
-              //           ),
-              //           const SizedBox(height: 4),
-              //           Row(
-              //             children: [
-              //               Icon(
-              //                 FeatherIcons.calendar,
-              //                 size: 12,
-              //                 color: ThemeColors.primary,
-              //               ),
-              //               const SizedBox(
-              //                 width: 6,
-              //               ),
-              //               Expanded(
-              //                 child: Text(
-              //                   DateFormat('EEE, dd MMM yyyy')
-              //                       .format(DateTime.now())
-              //                       .toString(),
-              //                   style: TextStyle(
-              //                       color: ThemeColors.primary,
-              //                       fontSize: 10,
-              //                       fontWeight: FontWeight.w400),
-              //                 ),
-              //               ),
-              //             ],
-              //           )
-              //         ],
-              //       ),
-              //     );
-              //   },
-              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              //       crossAxisCount: 2),
-              // ),
-              NewsList(posts: _posts, categories: widget.categories,),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: isLoading ? ConstantCupertino.indicator() : TextButton(
-                    onPressed: () {
-                      if (!isEnd) {
+    return ListView(
+      children: [
+        isFirst
+            ? ConstantCupertino.indicator()
+            : NewsList(
+                posts: _posts,
+                categories: widget.categories,
+              ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: isLoading
+              ? ConstantCupertino.indicator()
+              : TextButton(
+                  onPressed: () {
+                    if (!isEnd) {
+                      setState(() {
+                        isLoading = true;
+                        page = page + 1;
+                      });
+
+                      print(page);
+
+                      fetchData().then((value) {
                         setState(() {
-                          isLoading = true;
-                          page = page + 1;
+                          isLoading = false;
                         });
-
-                        print(page);
-
-                        fetchData().then((value) {
-                          setState(() {
-                            isLoading = false;
-                          });
-                        });
-                      }
-                    },
-                    child: Text(
-                      'Lebih banyak',
-                      style: TextStyle(color: ThemeColors.primary),
-                    )),
-              )
-            ],
-          );
+                      });
+                    }
+                  },
+                  child: Text(
+                    'Lebih banyak',
+                    style: TextStyle(color: ThemeColors.primary),
+                  )),
+        )
+      ],
+    );
   }
 }

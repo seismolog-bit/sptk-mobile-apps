@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "818832703137",
+    "project_id": "reindra-edu",
+    "storage_bucket": "reindra-edu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818832703137:android:59198cdea50f24fe60bae0",
+        "android_client_info": {
+          "package_name": "com.reindra.sptk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818832703137-94mo7b6h5dfo6j1nr10ut41g75slt181.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reindra.sptk",
+            "certificate_hash": "aa455fff47d16403b5094efbecda64d793b41ee2"
+          }
+        },
+        {
+          "client_id": "818832703137-ehlmaatccsu7s4qar1sj6ac62741l54g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSuhDpfFO_SPD4eG7NBqGTDy8WP7MNcCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818832703137-ehlmaatccsu7s4qar1sj6ac62741l54g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
