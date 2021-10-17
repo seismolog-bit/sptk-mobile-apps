@@ -7,6 +7,7 @@ import 'package:sptk/constant/constant.dart';
 import 'package:sptk/constant/cupertino.dart';
 import 'package:sptk/screens/home/home_sliders.dart';
 import 'package:sptk/screens/news/news_list.dart';
+import 'package:sptk/screens/news_webview.dart';
 import 'package:sptk/screens/notification/notification_screen.dart';
 import 'package:sptk/screens/web_view.dart';
 import 'package:sptk/utils/model/categories.dart';
@@ -148,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      const WebViewScene(
+                                      const NewsWebView(
                                         title: 'Simpatika login admin Madrasah',
                                         url:
                                             'https://paspor.siap-online.com/cas/login',
@@ -204,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      const WebViewScene(
+                                      const NewsWebView(
                                         title: 'Simpatika login PTK',
                                         url:
                                             'https://paspor.siap-online.com/cas/login?&service=https://padamu.siap.web.id/login',
